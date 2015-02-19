@@ -38,7 +38,7 @@
 #pragma mark - Images
 
 - (UIImage *)getRandomImage {
-    NSInteger imageNum = arc4random()%31 +1;
+    NSInteger imageNum = arc4random()%10 +1;
     return [UIImage imageNamed:[NSString stringWithFormat:@"img_%05zd", imageNum]];
 }
 
