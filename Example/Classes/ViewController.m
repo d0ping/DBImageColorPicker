@@ -20,19 +20,15 @@
 - (void)loadView {
     [super loadView];
     [self addImageViewObserver];
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changeImage)];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadNextImage)];
     [self.view addGestureRecognizer:tapGesture];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImage *image = [UIImage imageNamed:@"img_00012"];
+    UIImage *image = [self getRandomImage];
     _colorPicker = [[DBImageColorPicker alloc] initFromImage:image withBackgroundType:DBImageColorPickerBackgroundTypeFooterSide];
     _imageView.image = image;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 - (void)dealloc {
@@ -41,36 +37,69 @@
 
 #pragma mark - Images
 
-- (void)changeImage {
+- (UIImage *)getRandomImage {
     NSInteger imageNum = arc4random()%31 +1;
-    NSLog(@"%zd", imageNum);
-    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"img_%05zd", imageNum]];
-    _imageView.image = image;
+    return [UIImage imageNamed:[NSString stringWithFormat:@"img_%05zd", imageNum]];
+}
+
+- (void)loadNextImage {
+    [self setImage:[self getRandomImage] withTransition:YES];
+}
+
+- (void)setImage:(UIImage *)image withTransition:(BOOL)transition {
+    NSTimeInterval duration = 1.f;
+    __weak __typeof(self) weakSelf = self;
+    
+    void (^animationBlock)()  = ^{
+        weakSelf.imageView.image = image;
+    };
+    
+    if (transition) {
+        [UIView transitionWithView:_imageView
+                          duration:duration
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        animations:animationBlock
+                        completion:nil];
+    } else {
+        animationBlock();
+    }
 }
 
 #pragma mark - Colors
 
 - (void)updateColorWithAnimated:(BOOL)animated {
-    const float duration = 1.5f;
+    const float duration = 1.f;
     __weak __typeof(self) weakSelf = self;
-    void (^animationBlock)()  = ^{
-        weakSelf.view.backgroundColor = _colorPicker.backgroundColor;
-        weakSelf.titleLabel.textColor = _colorPicker.primaryTextColor;
-        weakSelf.subtitleLabel.textColor = _colorPicker.secondaryTextColor;
-    };
-    
     if (animated) {
+        [UIView transitionWithView:_titleLabel
+                          duration:duration
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        animations:^{
+                            weakSelf.titleLabel.textColor = _colorPicker.primaryTextColor;
+                        }
+                        completion:nil];
+        [UIView transitionWithView:_subtitleLabel
+                          duration:duration
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        animations:^{
+                            weakSelf.subtitleLabel.textColor = _colorPicker.secondaryTextColor;
+                        }
+                        completion:nil];
         [UIView animateWithDuration:duration
-                         animations:animationBlock];
+                         animations:^{
+                             weakSelf.view.backgroundColor = _colorPicker.backgroundColor;
+                         }];
     } else {
-        animationBlock();
+        _titleLabel.textColor = _colorPicker.primaryTextColor;
+        _subtitleLabel.textColor = _colorPicker.secondaryTextColor;
+        self.view.backgroundColor = _colorPicker.backgroundColor;
     }
 }
 
 #pragma mark - Observering
 
 - (void)addImageViewObserver {
-    [_imageView addObserver:self forKeyPath:NSStringFromSelector(@selector(image)) options:NSKeyValueObservingOptionOld context:nil];
+    [_imageView addObserver:self forKeyPath:NSStringFromSelector(@selector(image)) options:NSKeyValueObservingOptionInitial context:nil];
 }
 
 - (void)removeImageViewObserver {

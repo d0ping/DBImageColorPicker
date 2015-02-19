@@ -32,13 +32,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgW-cw-0UK">
-                                <rect key="frame" x="16" y="440" width="368" height="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's very useful class for determine different colors from your image." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgW-cw-0UK">
+                                <rect key="frame" x="16" y="440" width="368" height="42"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="2Gh-wB-gFt"/>
+                                    <constraint firstAttribute="height" constant="42" id="2Gh-wB-gFt"/>
                                 </constraints>
-                                <string key="text">Большинство приложений тратят много времени на ожидание событий и их обработку. Они ожидают взаимодействия пользователя с интерфейсом.</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

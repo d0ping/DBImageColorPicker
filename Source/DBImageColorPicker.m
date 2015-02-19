@@ -32,8 +32,8 @@
 - (id)initFromImage:(UIImage *)image withBackgroundType:(DBImageColorPickerBackgroundType)backgroundType {
     self = [super init];
     if (self) {
-        self.image = image;
         self.backgroundType = backgroundType;
+        self.image = image;
     }
     return self;
 }
