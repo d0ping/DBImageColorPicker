@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UXe-eK-8Rw">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UXe-eK-8Rw" secondAttribute="height" multiplier="1:1" id="JhW-ba-qNp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OGImageColorPicker" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Boq-s1-Hm1">
+                                <rect key="frame" x="16" y="408" width="368" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="hfx-0I-nWn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgW-cw-0UK">
+                                <rect key="frame" x="16" y="440" width="368" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="2Gh-wB-gFt"/>
+                                </constraints>
+                                <string key="text">Большинство приложений тратят много времени на ожидание событий и их обработку. Они ожидают взаимодействия пользователя с интерфейсом.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mgW-cw-0UK" secondAttribute="trailing" constant="16" id="15l-pU-ZbV"/>
+                            <constraint firstItem="Boq-s1-Hm1" firstAttribute="top" secondItem="UXe-eK-8Rw" secondAttribute="bottom" constant="8" id="Bqm-SL-4La"/>
+                            <constraint firstItem="Boq-s1-Hm1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="HPD-GE-Yqf"/>
+                            <constraint firstItem="mgW-cw-0UK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="M4f-rL-u1r"/>
+                            <constraint firstAttribute="trailing" secondItem="Boq-s1-Hm1" secondAttribute="trailing" constant="16" id="TNz-Y2-BjU"/>
+                            <constraint firstItem="UXe-eK-8Rw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="TW5-9x-KX2"/>
+                            <constraint firstAttribute="trailing" secondItem="UXe-eK-8Rw" secondAttribute="trailing" id="Tcu-Cj-Qku"/>
+                            <constraint firstItem="UXe-eK-8Rw" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Yoc-eA-o9u"/>
+                            <constraint firstItem="mgW-cw-0UK" firstAttribute="top" secondItem="Boq-s1-Hm1" secondAttribute="bottom" constant="8" id="hii-GO-Kah"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="600"/>
+                    <connections>
+                        <outlet property="imageView" destination="UXe-eK-8Rw" id="1fi-81-RAy"/>
+                        <outlet property="subtitleLabel" destination="mgW-cw-0UK" id="7DT-Tb-WLn"/>
+                        <outlet property="titleLabel" destination="Boq-s1-Hm1" id="LUJ-sy-0FP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
