@@ -13,6 +13,7 @@
 @property (nonatomic, weak) IBOutlet UIImageView            *imageView;
 @property (nonatomic, weak) IBOutlet UILabel                *titleLabel;
 @property (nonatomic, weak) IBOutlet UILabel                *subtitleLabel;
+@property (nonatomic, weak) IBOutlet UILabel                *clickPromptLabel;
 
 @end
 

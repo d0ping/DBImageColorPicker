@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
@@ -23,7 +24,7 @@
                                     <constraint firstAttribute="width" secondItem="UXe-eK-8Rw" secondAttribute="height" multiplier="1:1" id="JhW-ba-qNp"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OGImageColorPicker" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Boq-s1-Hm1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OGImageColorPicker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Boq-s1-Hm1">
                                 <rect key="frame" x="16" y="408" width="368" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="hfx-0I-nWn"/>
@@ -32,12 +33,22 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's very useful class for determine different colors from your image." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgW-cw-0UK">
-                                <rect key="frame" x="16" y="440" width="368" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mgW-cw-0UK">
+                                <rect key="frame" x="16" y="432" width="368" height="94"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="2Gh-wB-gFt"/>
+                                    <constraint firstAttribute="height" constant="94" id="2Gh-wB-gFt"/>
                                 </constraints>
+                                <string key="text">It's very useful component for determine different colors from your image. Component picker produces various types of main colors and additional primary and secondary colors.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.74999999999999978" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[click to update image]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fl1-kS-RiF">
+                                <rect key="frame" x="16" y="571" width="368" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2Ba-rc-yFR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -45,19 +56,29 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="mgW-cw-0UK" secondAttribute="trailing" constant="16" id="15l-pU-ZbV"/>
+                            <constraint firstItem="Fl1-kS-RiF" firstAttribute="bottom" secondItem="UXe-eK-8Rw" secondAttribute="bottom" id="2ZM-n7-aGp"/>
                             <constraint firstItem="Boq-s1-Hm1" firstAttribute="top" secondItem="UXe-eK-8Rw" secondAttribute="bottom" constant="8" id="Bqm-SL-4La"/>
                             <constraint firstItem="Boq-s1-Hm1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="HPD-GE-Yqf"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Fl1-kS-RiF" secondAttribute="bottom" constant="8" id="IK5-0t-wHe"/>
                             <constraint firstItem="mgW-cw-0UK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="M4f-rL-u1r"/>
                             <constraint firstAttribute="trailing" secondItem="Boq-s1-Hm1" secondAttribute="trailing" constant="16" id="TNz-Y2-BjU"/>
                             <constraint firstItem="UXe-eK-8Rw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="TW5-9x-KX2"/>
                             <constraint firstAttribute="trailing" secondItem="UXe-eK-8Rw" secondAttribute="trailing" id="Tcu-Cj-Qku"/>
+                            <constraint firstItem="Fl1-kS-RiF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="Uxb-ny-AM5"/>
                             <constraint firstItem="UXe-eK-8Rw" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Yoc-eA-o9u"/>
-                            <constraint firstItem="mgW-cw-0UK" firstAttribute="top" secondItem="Boq-s1-Hm1" secondAttribute="bottom" constant="8" id="hii-GO-Kah"/>
+                            <constraint firstAttribute="trailing" secondItem="Fl1-kS-RiF" secondAttribute="trailing" constant="16" id="djf-9Y-qne"/>
+                            <constraint firstItem="mgW-cw-0UK" firstAttribute="top" secondItem="Boq-s1-Hm1" secondAttribute="bottom" id="hii-GO-Kah"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2ZM-n7-aGp"/>
+                            </mask>
+                        </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="400" height="600"/>
                     <connections>
+                        <outlet property="clickPromptLabel" destination="Fl1-kS-RiF" id="nuU-lK-294"/>
                         <outlet property="imageView" destination="UXe-eK-8Rw" id="1fi-81-RAy"/>
                         <outlet property="subtitleLabel" destination="mgW-cw-0UK" id="7DT-Tb-WLn"/>
                         <outlet property="titleLabel" destination="Boq-s1-Hm1" id="LUJ-sy-0FP"/>

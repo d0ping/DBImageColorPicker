@@ -39,7 +39,7 @@
 
 - (UIImage *)getRandomImage {
     NSInteger imageNum = arc4random()%10 +1;
-    return [UIImage imageNamed:[NSString stringWithFormat:@"img_%05zd", imageNum]];
+    return [UIImage imageNamed:[NSString stringWithFormat:@"img_%05zd.jpg", imageNum]];
 }
 
 - (void)loadNextImage {
@@ -85,6 +85,13 @@
                             weakSelf.subtitleLabel.textColor = _colorPicker.secondaryTextColor;
                         }
                         completion:nil];
+        [UIView transitionWithView:_clickPromptLabel
+                          duration:duration
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        animations:^{
+                            weakSelf.clickPromptLabel.textColor = _colorPicker.secondaryTextColor;
+                        }
+                        completion:nil];
         [UIView animateWithDuration:duration
                          animations:^{
                              weakSelf.view.backgroundColor = _colorPicker.backgroundColor;
@@ -92,6 +99,7 @@
     } else {
         _titleLabel.textColor = _colorPicker.primaryTextColor;
         _subtitleLabel.textColor = _colorPicker.secondaryTextColor;
+        _clickPromptLabel.textColor = _colorPicker.secondaryTextColor;
         self.view.backgroundColor = _colorPicker.backgroundColor;
     }
 }
