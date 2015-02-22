@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'DBImageColorPicker'
-  s.version      = '1.0.3'
+  s.version      = '1.0.4'
   s.authors = { 'Denis Bogatyrev' => 'denis.bogatyrev@gmail.com' }
   s.summary      = 'Very useful component for determine different colors from your image'
   s.homepage     = 'https://github.com/d0ping/DBImageColorPicker'
