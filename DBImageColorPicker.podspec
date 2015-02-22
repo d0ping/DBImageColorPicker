@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/d0ping/DBImageColorPicker'
   s.license      = { :type => 'MIT' }
   s.platform     = :ios, '7.0'
-  s.source       = { :git => 'https://github.com/d0ping/DBImageColorPicker.git', :tag => "v#{s.version}" }
+  s.source       = { :git => 'https://github.com/d0ping/DBImageColorPicker.git', :tag => "#{s.version}" }
   s.source_files = 'Source/**/*.{h,m}'
   s.public_header_files = 'Source/**/*.h'
 end
