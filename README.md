@@ -2,7 +2,7 @@
 
 It's very useful component for determine different colors from your image. Component picker produces various types of main colors and additional primary and secondary colors.
 
-![Screenshot of Example](https://github.com/d0ping/DBImageColorPicker/tree/develop/Example/Resource/Screenshot.png)
+![Screenshot of Example](https://github.com/d0ping/DBImageColorPicker/blob/develop/Example/Resources/Screenshot.jpg)
 
 ##Installation
 
