@@ -116,7 +116,7 @@ float const selectionColorPointCount        = 144;
 }
 
 - (UIColor *)footerAverageColor {
-    CGRect subImageRect = CGRectMake(self.size.width * .9f, self.size.width * .9f, self.size.width * .1f, self.size.height * .1f);
+    CGRect subImageRect = CGRectMake(self.size.width * .9f, self.size.height * .9f, self.size.width * .1f, self.size.height * .1f);
     return [self averageColorForImage:[self getSubImageWithRect:subImageRect]];
 }
 
