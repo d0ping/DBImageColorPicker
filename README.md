@@ -4,7 +4,7 @@ It's very useful component for determine different colors from your image. Compo
 
 ![Screenshot of Example](https://github.com/d0ping/DBImageColorPicker/blob/develop/Example/Resources/Screenshot.jpg)
 
-##Installation
+## Installation
 
 To install DBImageColorPicker into your app, drag the DBImageColorPicker.h and .m class and UIImage+Color.h and .m category into your project. 
 
@@ -15,7 +15,7 @@ and execute pod install.
 To use it, just import the DBImageColorPicker.h header file into any class, and then initialize DBImageCollorPicker instance and specify UIImage object to image property. Use the relevant properties of your DBImageColorPicker instance for getting colors.
 
 
-##License
+## License
 
 DBImageColorPicker - Copyright (c) 2015 Denis Bogatyrev
 
