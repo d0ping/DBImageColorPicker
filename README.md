@@ -49,7 +49,7 @@ Denis Bogatyrev (maintainer)
 - https://github.com/d0ping
 - denis.bogatyrev@gmail.com
 
-##License
+## License
 
 DBImageColorPicker - Copyright (c) 2015 Denis Bogatyrev
 
